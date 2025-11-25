@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio Navbar</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    color: white;
+}
+
+/* Background video */
+video.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Foreground video (man flying) */
+video.flying-man {
+    position: absolute;
+    width: 400px;  /* Set desired width */
+    height: auto;
+    top: 50px;     /* Set desired top position */
+    left: 50px;    /* Set desired left position */
+    z-index: 1;
+    object-fit: contain;
+    pointer-events: auto;
+}
+.skill {
+    position: relative;
+    width: 700px;      /* adjust if needed */
+    height: 500px;     /* space for scattered images */
+}
+
+.skill-img {
+    position: absolute;
+    width: 100px;
+}
+
+/* scattered positions */
+.skills-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.skill-img {
+    position: absolute;
+    width: 110px;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.8))
+            drop-shadow(0 0 25px rgba(0,180,255,0.6));
+    transition: transform 0.3s ease;
+}
+
+/* Hover glow */
+.skill-img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 20px rgba(255,255,255,1))
+            drop-shadow(0 0 40px rgba(0,200,255,1));
+}
+
+/* Scattered positions across whole screen */
+.img1 { top: 8%; left: 10%; }
+.img2 { top: 20%; left: 45%; }
+.img3 { top: 10%; left: 70%; }
+.img4 { top: 55%; left: 22%; }
+.img5 { top: 68%; left: 48%; }
+
+/* Floating animation */
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+
+
+/* CONNECT BUTTON */
+.connect-btn {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.connect-btn:hover {
+    box-shadow: 0 0 12px yellow;
+    color: rgb(240, 238, 111);
+}
+
+.right-img {
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    width: 600px;
+}
+
+p {
+    padding-left: 50px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+/* CENTER BUTTON */
+.center-btn {
+    text-align: center;
+    margin-top: 25px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- BACKGROUND VIDEO -->
+<video class="bg-video" autoplay loop muted playsinline>
+    <source src="/startup/media/mixkit-beautiful-glowing-nebula-in-space-31565-hd-ready.mp4" type="video/mp4">
+</video>
+
+<!-- FOREGROUND VIDEO (Man flying, not covering whole page) -->
+ <div class="skill">
+    <a href="#"><img src="/startup/media/codinglogo/c.png" alt="Skill Image" class="skill-img img1"></a>
+    <img src="/startup/media/codinglogo/html.png" alt="Skill Image" class="skill-img img2">
+    <img src="/startup/media/codinglogo/css.png" alt="Skill Image" class="skill-img img3">
+    <img src="/startup/media/codinglogo/js.png" alt="Skill Image" class="skill-img img4">
+    <img src="/startup/media/codinglogo/python.png" alt="Skill Image" class="skill-img img5">
+</div>
+
+<!-- CENTERED BUTTON -->
+<div class="center-btn">
+    <a href="http://127.0.0.1:5500/startup/portfolia1.html#" target="_blank">
+        <button class="connect-btn">BACK</button>
+    </a>
+</div>
+
+</body>
+</html>

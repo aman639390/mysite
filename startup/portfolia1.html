@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio Navbar</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    color: white;
+}
+
+/* Background video */
+video.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* NAVBAR MAIN STYLE */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+}
+
+/* LEFT SIDE: LOGO + TEXT */
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-area a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    padding: 5px 4px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+.logo-area a:hover {
+    box-shadow: 0 0 12px rgb(172, 51, 224);
+    color: rgb(237, 137, 214);
+}
+.logo-area span {
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* RIGHT MENU */
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 45px;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    box-shadow: 0 0 12px rgb(172, 51, 224);
+    color: rgb(237, 137, 214);
+}
+
+/* CONNECT BUTTON */
+.connect-btn {
+    
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 80px;
+    margin-left: 150px;
+    transition: 0.3s ease;
+}
+.connect-btn {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.8))
+            drop-shadow(0 0 25px rgba(0,180,255,0.6));
+    transition: transform 0.3s ease;
+}
+/* Floating animation */
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.connect-btn:hover {
+    box-shadow: 0 0 12px yellow;
+    color: rgb(240, 238, 111);
+}
+
+/* CONTENT SECTION */
+
+
+.content h5{
+    margin-left: 150px;
+    margin-top: 100px;
+    font-size: 15px;
+    text-shadow: 0 0 5px black;
+}
+.right-img {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 650px;
+    top: 100px;
+    width: 650px;
+}
+
+.main-quote {
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 50px;
+    margin-left: 25px;
+    line-height: 42px;
+    text-shadow: 0 0 8px black;
+    width: 650px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- BACKGROUND VIDEO -->
+<video class="bg-video" autoplay loop muted playsinline>
+    <source src="/startup/media/mixkit-beautiful-glowing-nebula-in-space-31565-hd-ready.mp4" type="video/mp4">
+</video>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+    <!-- Left: Logo + Text -->
+    <div class="logo-area">
+        <img src="/startup/media/buildings.png" alt="Logo">
+        <a href="#"><span>MY PORTFOLIO</span></a>
+    </div>
+
+    <!-- Right: Menu -->
+    <div class="menu">
+        <a href="http://127.0.0.1:5500/startup/about.html">ABOUT</a>
+        <a href="http://127.0.0.1:5500/startup/skill.html">SKILL</a>
+        <a href="http://127.0.0.1:5500/startup/blog.html">BLOG</a>
+        <a href="#">EDUCATION</a>
+        <a href="http://127.0.0.1:8000/contact/">CONTACT</a>
+    </div>
+
+</div>
+
+<!-- CONTENT SECTION -->
+<div class="content">
+    <h5><span style="color: yellow;">I am</span>
+       currently pursuing engineering <br>at Ajay Kumar Garg Engineering College.</h5>
+    <h1 class="main-quote">
+        SUCCESS IS BUILT ONE SMALL STEP AT A TIME
+        — CONSISTENCY IS THE SECRET.
+    </h1>
+
+    
+    <button class="connect-btn">CONNECT WITH ME</button>
+    <img class="right-img" 
+         src="/startup/media/person.png" 
+         alt="person">
+
+</body>
+</html>
